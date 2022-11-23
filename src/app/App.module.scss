@@ -1,0 +1,77 @@
+.favoritesButton {
+    @apply shadow-3xl h-12 flex justify-center items-center mt-5 mx-auto
+    bg-white py-2 px-4 text-sm leading-5 tracking-wide rounded-3xl text-alfa uppercase
+    transition-colors duration-300 relative;
+
+    &_active {
+        @apply bg-alfa text-white
+    }
+
+    &:hover {
+        @apply bg-alfa text-white
+    }
+
+    &__svg {
+        @apply h-6 w-6 text-2xl mr-2 
+
+    }
+    &__badge {
+        @apply absolute -top-2 left-32 w-5 h-5 bg-red-400 text-white rounded-3xl text-xs
+        flex justify-center items-center z-10
+    }
+}
+
+.card {
+    @apply  max-w-xs mx-auto min-[280px]:hover:scale-110 transition-transform duration-200 ease-linear;
+
+    &__header {
+        @apply flex p-4  bg-white rounded-t-xl items-center;
+    }
+    &__name {
+        @apply text-xl flex-auto;
+    }
+    &__footer {
+        @apply bg-white flex p-3 items-center
+    }
+}
+
+.action {
+    @apply flex items-center;
+
+    &__favorite {
+        @apply h-9 w-9 text-2xl mr-2 hover:fill-alfa transition-colors duration-200
+    }
+    &__delete {
+        @apply h-10 w-10 p-2 bg-red-400 rounded-3xl transition-colors duration-200;
+        &:hover {
+            @apply bg-red-500 fill-black
+        }
+    }
+}
+
+.badges {
+    @apply flex-auto flex max-[280px]:flex-col ;
+    span:not(:first-child) {
+        @apply ml-2
+    }
+}
+.toggle {
+    @apply flex items-center mr-1;
+    &__button {
+        @apply rotate-0 transition-transform duration-300
+    }
+    &__button_active {
+        @apply rotate-180 transition-transform duration-300
+    }
+}
+.collapse {
+    @apply bg-white ease-in-expo transition-all duration-300 overflow-hidden max-h-0 rounded-b-xl
+}
+
+.collapse_active {
+    @apply  max-h-screen
+}
+
+.collapse__wrapper {
+   @apply p-3 flex flex-col items-start;
+}
