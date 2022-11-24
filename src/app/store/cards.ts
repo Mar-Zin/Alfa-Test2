@@ -75,11 +75,6 @@ export const removeCard =
 export const getCards = () => (state: RootState) => state.cards.entities;
 export const getCardsLoadingStatus = () => (state: RootState) =>
   state.cards.isLoading;
-export const getItemById = (id: number) => (state: RootState) => {
-  if (state.cards.entities) {
-    return state.cards.entities.find((item: iCardItem) => item.id === id);
-  }
-};
 export const getError = () => (state: RootState) => state.cards.error;
 
 export default cardsReducer;

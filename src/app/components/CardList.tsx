@@ -1,11 +1,11 @@
-import { FC, memo } from "react";
+import { FC, Dispatch, SetStateAction, memo } from "react";
 import { iCardItem } from "../../models";
 import CardItem from "./CardItem";
 
 interface CardListProps {
   cards: iCardItem[];
   favorites: number[];
-  setFavorites: any;
+  setFavorites: Dispatch<SetStateAction<number[]>>;
 }
 
 const CardList: FC<CardListProps> = memo(

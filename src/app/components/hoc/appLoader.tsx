@@ -1,11 +1,11 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, ReactNode } from "react";
 import { useSelector } from "react-redux";
 import localStorageService from "../../services/localStorage.service";
 import { getCardsLoadingStatus, loadCardList } from "../../store/cards";
 import { useAppDispatch } from "../../store/store";
 
 interface AppLoaderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const AppLoader: FC<AppLoaderProps> = ({ children }: any) => {

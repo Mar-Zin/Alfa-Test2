@@ -1,4 +1,4 @@
-import { FC, memo, useState } from "react";
+import { FC, Dispatch, SetStateAction, memo, useState } from "react";
 import { iCardItem } from "../../models";
 import style from "../App.module.scss";
 import localStorageService from "../services/localStorage.service";
@@ -11,7 +11,7 @@ import DeleteIcon from "./common/DeleteIcon";
 interface CardProps {
   card: iCardItem;
   favorites: number[];
-  setFavorites: any;
+  setFavorites: Dispatch<SetStateAction<number[]>>;
 }
 
 const CardItem: FC<CardProps> = memo(({ card, favorites, setFavorites }) => {

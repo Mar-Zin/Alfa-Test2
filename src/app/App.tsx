@@ -31,7 +31,7 @@ const App: FC = () => {
 
   return (
     <AppLoader>
-      <div className="min-h-screen bg-slate-100 flex flex-col">
+      <div className="min-h-screen min-w-225 bg-slate-100 flex flex-col">
         <Header />
         <FavoriteButton
           filter={handleFiltred}

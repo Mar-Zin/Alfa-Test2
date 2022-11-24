@@ -22,7 +22,7 @@
 }
 
 .card {
-    @apply  max-w-xs mx-auto min-[280px]:hover:scale-110 transition-transform duration-200 ease-linear;
+    @apply  max-w-xs mx-auto min-[630px]:hover:scale-110 transition-transform duration-200 ease-linear;
 
     &__header {
         @apply flex p-4  bg-white rounded-t-xl items-center;
@@ -31,7 +31,7 @@
         @apply text-xl flex-auto;
     }
     &__footer {
-        @apply bg-white flex p-3 items-center
+        @apply bg-white flex p-3 items-center shadow-xl
     }
 }
 
@@ -39,7 +39,7 @@
     @apply flex items-center;
 
     &__favorite {
-        @apply h-9 w-9 text-2xl mr-2 hover:fill-alfa transition-colors duration-200
+        @apply h-9 w-9 text-2xl mr-2 min-[630px]:hover:fill-alfa transition-colors duration-200 
     }
     &__delete {
         @apply h-10 w-10 p-2 bg-red-400 rounded-3xl transition-colors duration-200;
@@ -50,9 +50,12 @@
 }
 
 .badges {
-    @apply flex-auto flex max-[280px]:flex-col ;
+    @apply flex-auto flex max-[280px]:flex-col  max-[280px]:text-center;
     span:not(:first-child) {
-        @apply ml-2
+        @apply min-[280px]:ml-2 
+    }
+    span:not(:last-child) {
+        @apply max-[280px]:mb-2
     }
 }
 .toggle {
